@@ -1,0 +1,2077 @@
+
+<!DOCTYPE html>
+<html lang="en" style="overflow-x:hidden;">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keyword" content="">
+   
+
+    <title>DALA - Admin</title>
+
+    <!-- Icons -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Main styles -->
+    <link href="css/style.css" rel="stylesheet">
+	<link href="css/bootstrap-nav-wizard.css" rel="stylesheet">
+</head>
+
+
+<body class="navbar-fixed sidebar-nav fixed-nav">
+    <header class="navbar">
+        <div class="container-fluid">
+            <button class="navbar-toggler mobile-toggler hidden-lg-up" type="button">☰</button>
+            <a class="navbar-brand" href="#"></a>
+            <ul class="nav navbar-nav hidden-md-down">
+                <li class="nav-item">
+                    <a class="nav-link navbar-toggler layout-toggler" href="#">☰</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav float-xs-right hidden-md-down">
+              
+              <li class="nav-item">
+             <!-- Split button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-sm btn-danger">English</button>
+  <button type="button" class="btn btn-sm btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" style="padding:3px 1.5rem;" href="#">English</a></li>
+    <li><a class="dropdown-item" style="padding:3px 1.5rem;" href="#">සිංහල </a></li>
+    <li><a class="dropdown-item" style="padding:3px 1.5rem;" href="#">தமிழ்</a></li>
+   
+  </ul>
+</div>
+               </li>
+               
+                <li class="nav-item">
+                    <a class="nav-link aside-toggle" href="#"><i class="fa fa-envelope-o"></i><span style="font-size:11px;" class="tag tag-pill tag-danger">5</span></a>
+                </li>
+               
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <img src="img/default-user-image.png" class="img-avatar" alt="">
+                        <span class="hidden-md-down">admin</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+
+                        <div class="dropdown-header text-xs-center">
+                            <strong>Account</strong>
+                        </div>
+                        
+                        <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                    </div>
+                </li>
+                <li class="nav-item"> 
+                &nbsp;
+                 </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="sidebar">
+
+        <nav class="sidebar-nav">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="icon-speedometer"></i> Dashboard </a>
+                </li>
+
+                <li class="nav-title">
+                    Health
+                </li>
+                <li class="nav-item nav-dropdown">
+                    <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Baseline Info</a>
+                    <ul class="nav-dropdown-items">
+                        <li class="nav-item">
+                            <a class="nav-link" href="health_baseline_rdh.html"> Health status in a District or RDH</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="health_baseline_district.html"> Medical facilities in a district</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="health_baseline_unitcost_district.html"> Unit cost of the Ministry Health System in a district</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="health_baseline_unitcost_othermedi_district.html"> unit cost of other medical facilities in a district </a>
+                        </li>
+                       
+                        <li class="nav-item">
+                            
+                        </li>
+                    </ul>
+                </li>
+               
+               
+                <li class="nav-item nav-dropdown">
+                    <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Damages and Loss</a>
+                    <ul class="nav-dropdown-items">
+                        <li class="nav-item">
+                            <a class="nav-link" href="health_damagelost_ministry_helth.html"> Line Ministry Health System</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="health_damagelost_other_medi.html"> Other medical facilities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="health_damagelost_private.html"> Assessment of private health facilities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="health_summery_damageloss_dis.html"> Summery health sector in a district</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="health_summery_damageloss_province.html"> Summery Health sector in the province</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="health_summery_damageloss_national.html"> Summery health sector nationwide</a>
+                        </li>
+						
+						
+                        <li class="nav-item">
+                            
+                        </li>
+                    </ul>
+                </li>
+               
+ 
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main content -->
+    <main class="main">
+
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb">
+            
+            <li class="breadcrumb-item"><a href="#">Admin</a>
+            </li>
+			 <li class="breadcrumb-item"><a href="#">Health Sector</a>
+            </li>
+           
+			<li class="breadcrumb-item active"><span class="label label-success" style="font-size:14px;">Table 5: Damages and Losses in the Line Ministry Health System</span></li>
+           
+        </ol>
+
+
+        <div class="container-fluid">
+		
+		 <div>
+			    <ul class='nav nav-wizard'>
+				    <li class="active"><a href='#step1' data-toggle="tab">1 Destroyed Facilities and Assets</a></li>
+				    <li><a href='#step2' data-toggle="tab">2 No of Destroyed Assets by Types of Facilities</a></li>
+                    <li ><a href='#step3' data-toggle="tab">3 Partially Damaged Facilities and Assets</a></li>
+				    <li><a href='#step4' data-toggle="tab">4 No of Partially Damaged Assets</a></li>
+                    <li><a href='#step5' data-toggle="tab">5 Losses</a></li>
+				   
+				  </ul>
+				
+					<div id="myTabContent" class="tab-content">
+						<div class="tab-pane active" id="step1">
+						
+						 <table class="table table-bordered" style="width:100%;background:#E4E5E6;">
+    <colgroup>
+        <col width="264"/>
+        <col width="98" span="6"/>
+    </colgroup>
+    <tbody>
+        <tr class="trhead">
+<td style="padding-left:5px;"> Name of District </td>
+
+<td colspan="7" style="background:#EFEFEF;">
+ <select id="selectbasic" name="selectbasic" class="form-control" style="width:50%;font-weight:400;">
+      <option value="1">Option one</option>
+      <option value="2">Option two</option>
+    </select>
+ </td>
+</tr>
+       
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+            </td>
+            <td colspan="5" width="490" style="text-align:center;">
+                Type of Facility
+            </td>
+            <td width="98">
+            </td>
+        </tr>
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+            </td>
+            <td colspan="3" width="294">
+                Line Ministry Health System
+            </td>
+            <td colspan="2" width="196">
+                MOH
+            </td>
+            <td rowspan="2" width="98">
+                Total Number
+            </td>
+        </tr>
+        <tr height="34" class="trsubc">
+            <td width="264" height="34" class="trheadc">
+            </td>
+            <td width="98">
+                Teaching Hospitals
+            </td>
+            <td width="98">
+                Provincial General Hospitals
+            </td>
+            <td width="98">
+                District General Hospitals
+            </td>
+            <td width="98">
+                Offices
+            </td>
+            <td width="98">
+                Others
+            </td>
+        </tr>
+                                </tbody>
+                                </table>
+                                <div style="height:400px;overflow:auto;">	
+                                <table class="table table-bordered">
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Number of Destroyed Facilities
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+               
+            </td>
+        </tr>
+        <tr height="20" class="trheadc">
+            <td width="264" height="20" >
+                Number of Patients Affected
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Male
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+              <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Female
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+              <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+						
+                                    </tbody>	
+                                    </table>	
+                            <br>
+                            <a href="#step2" class="btn btn-sm btn-info pull-right" data-toggle="tab"><span class="glyphicon glyphicon-arrow-right"></span> Fill No of Destroyed Assets by Types of Facilities Informations</a>
+                        </div>
+                        
+						</div>
+						
+						<div class="tab-pane" id="step2">
+						 <table class="table table-bordered" style="width:98.3%;background:#E4E5E6;">
+                              <colgroup>
+        <col width="264"/>
+        <col width="98" span="6"/>
+    </colgroup>
+    <tbody>
+						
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+            </td>
+            <td colspan="3" width="294" style="text-align:center;">
+                Line Ministry Health System
+            </td>
+            <td colspan="2" width="196">
+                MOH
+            </td>
+            <td rowspan="2" width="98" style="text-align:center;">
+                Total Damages (LKR)
+            </td>
+        </tr>
+        <tr height="34" class="trsubc">
+            <td width="264" height="34" class="trhead" style="text-align:left;">
+                Assets
+            </td>
+            <td width="98">
+                Teaching Hospitals
+            </td>
+            <td width="98">
+                Provincial General Hospitals
+            </td>
+            <td width="98">
+                District General Hospitals
+            </td>
+            <td width="98">
+                Offices
+            </td>
+            <td width="98">
+                Others
+            </td>
+        </tr>
+                             </tbody>
+                            </table>
+                            <div style="height:400px;overflow:auto;">	
+                                <table class="table table-bordered">
+                             <colgroup>
+        <col width="264"/>
+        <col width="98" span="6"/>
+    </colgroup>
+    <tbody>
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+                Structures (in sqm)
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                1 Floor Structure
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                2-3 Floors Structure
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                More Than 3 Floors Structure
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+               <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Value of Destroyed Structures
+            </td>
+            <td width="98">
+             <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+                Set of Supplies
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Medicines
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" >
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Medical Supplies
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" >
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Others
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" >
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Value of Destroyed Supplies
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20" class="trheadc">
+            <td width="264" height="20" >
+                Medical Equipment
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                CT Scan
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                X-ray Machine
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                MRI Machine
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Other Equipment (Specify)
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Value of Destroyed Medical Equipment
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+                Other Assets
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Computers
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Vehicles
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Furniture
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Office Equipment
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Others
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Value of Destroyed Other Assets
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+               <strong> VALUE OF DESTROYED ASSETS </strong>
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <a href="#step3" class="btn btn-sm btn-info pull-right" data-toggle="tab"><span class="glyphicon glyphicon-arrow-right"></span> Fill Partially Damaged Facilities and Assets Informations</a>
+                            </div>
+ 
+                            </div>
+                        
+                        <div class="tab-pane" id="step3">
+                            
+						<table class="table table-bordered" style="width:100%;background:#E4E5E6;">
+    <colgroup>
+        <col width="264"/>
+        <col width="98" span="6"/>
+    </colgroup>
+    <tbody>
+       
+       
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+            </td>
+            <td colspan="5" width="490" style="text-align:center;">
+                Type of Facility
+            </td>
+            <td width="98">
+            </td>
+        </tr>
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+            </td>
+            <td colspan="3" width="294">
+                Line Ministry Health System
+            </td>
+            <td colspan="2" width="196">
+                MOH
+            </td>
+            <td rowspan="2" width="98">
+                Total Number
+            </td>
+        </tr>
+        <tr height="34" class="trsubc">
+            <td width="264" height="34" class="trhead">
+            </td>
+            <td width="98">
+                Teaching Hospitals
+            </td>
+            <td width="98">
+                Provincial General Hospitals
+            </td>
+            <td width="98">
+                District General Hospitals
+            </td>
+            <td width="98">
+                Offices
+            </td>
+            <td width="98">
+                Others
+            </td>
+        </tr>
+                                </tbody>
+                                </table>
+                                <div style="height:400px;overflow:auto;">	
+                                <table class="table table-bordered">
+                                    <tbody>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Number of Destroyed Facilities
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+               
+            </td>
+        </tr>
+        <tr height="20" class="trheadc">
+            <td width="264" height="20" >
+                Number of Patients Affected
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Male
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+              <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Female
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+              <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+                                    </tbody>
+                                    </table>
+                                    <br>
+                                    <a href="#step4" class="btn btn-sm btn-info pull-right" data-toggle="tab"><span class="glyphicon glyphicon-arrow-right"></span> Fill No of Partially Damaged Assets Informations</a>
+                            </div>
+
+                            </div>
+                        
+                        <div class="tab-pane" id="step4">
+						<table class="table table-bordered" style="width:98.3%;background:#E4E5E6;">
+    <colgroup>
+        <col width="264"/>
+        <col width="98" span="6"/>
+    </colgroup>
+    <tbody>
+						
+        
+        
+       
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+            </td>
+            <td colspan="3" width="294" style="text-align:center;">
+                Line Ministry Health System
+            </td>
+            <td colspan="2" width="196" style="text-align:center;">
+                MOH
+            </td>
+            <td rowspan="2" width="98">
+                Total Damages (LKR)
+            </td>
+        </tr>
+        <tr height="34" class="trsubc">
+            <td width="264" height="34" class="trhead">
+                Assets
+            </td>
+            <td width="98">
+                Teaching Hospitals
+            </td>
+            <td width="98">
+                Provincial General Hospitals
+            </td>
+            <td width="98">
+                District General Hospitals
+            </td>
+            <td width="98">
+                Offices
+            </td>
+            <td width="98">
+                Others
+            </td>
+        </tr>
+                            </tbody>
+                            </table>
+                            <div style="height:400px;overflow:auto;">	
+                                <table class="table table-bordered">
+                                    <tbody>
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+                Structure (in sqm)
+            </td>
+            <td width="98">
+			
+            </td>
+            <td width="98">
+			
+            </td>
+            <td width="98">
+			
+            </td>
+            <td width="98">
+			
+            </td>
+            <td width="98">
+			
+            </td>
+            <td width="98">
+			
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Roof
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Wall
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Flooring
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+               <strong> Value of Partially Damaged Structure </strong>
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+                Medical Equipment
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                CT Scan
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                X-ray Machine
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                MRI Machine
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Other Equipment (Specify)
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="34">
+            <td width="264" height="34" class="tdpa">
+                <strong> Value of Partially Damaged Medical Equipment </strong>
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98" style="background:#E4E5E6;">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+                Other Assets
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Computers
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Vehicles
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Furniture
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Office Equipment
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Others
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                <strong> Value of Partially Damaged Other Assets </strong>
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                <strong>   VALUE OF PARTIALLY DAMAGED ASSETS </strong>
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+             <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+              <strong>  GRAND TOTAL OF DAMAGES </strong>
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <a href="#step5" class="btn btn-sm btn-info pull-right" data-toggle="tab"><span class="glyphicon glyphicon-arrow-right"></span> Fill Losses Informations</a>
+                            </div>
+                            
+                            </div>
+                        
+                        <div class="tab-pane" id="step5">
+						 <table class="table table-bordered" style="width:98.3%;background:#E4E5E6;">
+    <colgroup>
+        <col width="264"/>
+        <col width="98" span="6"/>
+    </colgroup>
+    <tbody>
+						
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+                Types of Losses
+            </td>
+            <td colspan="3" width="294" style="text-align:center;">
+                Line Ministry Health System
+            </td>
+            <td colspan="2" width="196" style="text-align:center;">
+                MOH
+            </td>
+            <td rowspan="2" width="98">
+                Total Losses (LKR)
+            </td>
+        </tr>
+        <tr height="51" class="trsubc">
+            <td width="264" height="51" class="trheadc">
+            </td>
+            <td width="98">
+                Teaching Hospitals
+            </td>
+            <td width="98">
+                Provincial General Hospitals
+            </td>
+            <td width="98">
+                District General Hospitals
+            </td>
+            <td width="98">
+                Offices
+            </td>
+            <td width="98">
+                Others
+            </td>
+        </tr>
+                             </tbody>
+                            </table>
+                            
+                             <div style="height:400px;overflow:auto;">	
+                                <table class="table table-bordered">
+                                    <tbody>
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+                Foregone Income
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Disaster Year 1
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Year 2
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                <strong> Total </strong>
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+                Cleaning Up of Debris
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Disaster Year 1
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Year 2
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                <strong>  Total </strong>
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+                Higher Operating Costs
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Disaster Year 1
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Year 2
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                <strong>  Total </strong>
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20" class="trheadc">
+            <td width="264" height="20">
+                Other Unexpected Expenses
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+            <td width="98">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Disaster Year 1
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                Year 2
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+			<input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+                <strong>  Total </strong>
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+        <tr height="20">
+            <td width="264" height="20" class="tdpa">
+              <strong>  TOTAL VALUE OF LOSSES </strong>
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+            <td width="98">
+            <input id="textinput" name="textinput" type="text" placeholder="" class="form-control input-md">
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+                            </div>
+						
+						
+						</div>
+					</div>
+		</div>
+		
+		
+
+       <br>
+
+        </div>
+        <!-- /.conainer-fluid -->
+    </main>
+  <aside class="aside-menu">
+       
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            
+            <div class="tab-pane active p-1" id="messages" role="tabpanel">
+                <div class="message">
+                    
+                    <div>
+                        <small class="text-muted">Lukasz Holeczek</small>
+                        <small class="text-muted float-xs-right mt-q">1:52 PM</small>
+                    </div>
+                    <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                    <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                </div>
+                <hr>
+                 <div class="message">
+                    
+                    <div>
+                        <small class="text-muted">Lukasz Holeczek</small>
+                        <small class="text-muted float-xs-right mt-q">1:52 PM</small>
+                    </div>
+                    <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                    <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                </div>
+                <hr>
+                 <div class="message">
+                    
+                    <div>
+                        <small class="text-muted">Lukasz Holeczek</small>
+                        <small class="text-muted float-xs-right mt-q">1:52 PM</small>
+                    </div>
+                    <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                    <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                </div>
+                <hr>
+                <div class="message">
+                    
+                    <div>
+                        <small class="text-muted">Lukasz Holeczek</small>
+                        <small class="text-muted float-xs-right mt-q">1:52 PM</small>
+                    </div>
+                    <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                    <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                </div>
+                <hr>
+                <div class="message">
+                    
+                    <div>
+                        <small class="text-muted">Lukasz Holeczek</small>
+                        <small class="text-muted float-xs-right mt-q">1:52 PM</small>
+                    </div>
+                    <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+                    <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt...</small>
+                </div>
+            </div>
+          
+        </div>
+    </aside>
+    <footer class="footer">
+        <span class="text-left">
+             © 2016 ADPC.
+        </span>
+        <span class="float-xs-right">
+            Developed by <a href="http://geoedge.lk">GeoEDGE</a>
+        </span>
+    </footer>
+
+    <!-- Bootstrap and necessary plugins -->
+    <script src="js/jquery.min.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+   
+<script>
+    $(function(){
+
+    $(".dropdown-menu li a").click(function(){
+
+      $(".btn:first-child").text($(this).text());
+      $(".btn:first-child").val($(this).text());
+
+   });
+
+});
+    </script>
+
+    <!-- GenesisUI main scripts -->
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

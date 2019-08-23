@@ -1,0 +1,559 @@
+
+<head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'table1/css/style.css' %}">
+
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="keyword" content="">
+
+        <title>DALA - Admin</title>
+
+        <link rel="stylesheet" type="text/css" href='{% static "table1/css/font-awesome.min.css" %}'>
+        <link rel="stylesheet" type="text/css" href='{% static "table1/css/simple-line-icons.css" %}'>
+        <link rel="stylesheet" type="text/css" href='{% static "table1/css/style.css" %}'>
+        <link rel="stylesheet" type="text/css" href='{% static "table1/css/bootstrap-nav-wizard.css" %}'>
+        <link rel="stylesheet" type="text/css" href='{% static "table1/css/datepicker.css" %}'>
+        <link href="{% static 'table1/css/datepicker.css' %}" rel="stylesheet">
+
+        <!-- <script src='{% static "table1/js/jquery.min.js" %}'></script> -->
+        <!-- <script src='{% static "table1/js/jquery.numberformatter.js" %}'></script> -->
+        <script src='{% static "table1/js/jquery.nicescroll.min.js" %}'></script>
+        <script src='{% static "table1/js/bootstrap.min.js" %}'></script>
+        <script src='{% static "table1/js/angular/angular.js" %}'></script>
+        <script src="{% static 'table1/js/popover-toggle.js' %}"></script>
+        <script src="{% static 'table1/js/ng-print.js' %}"></script>
+        <script src="{% static 'table1/js/ui-bootstrap-tpls-0.12.0.min.js' %}"></script>
+        <script src='{% static "table1/js/underscore-min.js" %}'></script>
+        <script src='{% static "table1/js/angular-underscore.min.js" %}'></script>
+        <script src='{% static "table1/js/angular-underscore-module.js" %}'></script>
+        <script src="{% static 'table1/js/bootstrap-datepicker.js' %}"></script>
+        <script src="{% static 'table1/js/popover-toggle.js' %}"></script>
+        <script src="{% static 'table1/js/ui-bootstrap-tpls-0.12.0.min.js' %}"></script>
+        <script src='{% static "table1/js/dashboard.js" %}'></script> 
+
+        <!-- <script src='{% static "transport_air/damage_losses/js/dl_air_trnspt_natnal.js" %}'></script>
+        <script src='{% static "transport_air/damage_losses/js/dl_air_trnspt_provn.js" %}'></script>
+        <script src='{% static "transport_air/damage_losses/js/dl_air_trnspotation.js" %}'></script>
+        <script src='{% static "transport_air/damage_losses/js/dl_air_trnspot_dtrs.js" %}'></script>
+        <script src='{% static "transport_air/base_line/js/bs_info_aset_trns.js" %}'></script>-->
+
+</head>
+
+
+
+<!-- Main content -->
+<main class="main" ng-app="bsInfoAsetTransApp" ng-controller="BsInfoAsetTransController"> 
+    <!-- Breadcrumb -->
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a >
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item">
+            <a>
+                Transport Air Sector
+            </a>
+        </li>
+        <li class="breadcrumb-item active">
+			<span class="label label-success" style="font-size:14px;">
+                Table 1. Baseline Information on the Assets in the Air Transportation Sub-sector
+            </span>
+        </li>
+        <li style="float:right;">
+            <a  target="_blank"
+               style="font-size: 18px;font-weight:bold;text-decoration: none;"
+               class="icon-info" data-toggle="tooltip" title="Veiw Document">
+            </a>
+        </li>
+    </ol>
+
+    <div class="container-fluid" ng-form name="form_bs_info_aset_trns">
+        <ul class='nav nav-wizard'>
+            <li id="li1" class="active">
+                <a href='#step1' data-toggle="tab">1 - Assets</a>
+            </li>
+            <li id="li2">
+                <a href='#step2' data-toggle="tab">2 - Structures</a>
+            </li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane active" id="step1">
+                <table class="table table-bordered">
+                    <colgroup>
+                        <col width="218"/>
+                        <col width="63"/>
+                        <col width="63"/>
+                        <col width="63"/>
+                        <col width="63"/>
+                        <col width="63"/>
+                        <col width="63"/>
+                    </colgroup>
+                    <tbody>
+                    <tr style="background:#fff;border:1px solid #fff;text-align:center;">
+                        <td style="background:#fff;border:1px solid #fff;text-align:center;" border="0"></td>
+                        <td colspan="2" style="background:#fff;border:1px solid #fff;text-align:center;">
+                            <!-- <span class="arrow_box" ng-show="submitted && form_bs_info_aset_trns.district.$error.required">
+                                Please select District
+                            </span> -->
+                        </td>
+                        <td colspan="1" style="background:#fff;border:1px solid #fff;text-align:center;">
+                        </td>
+                        <td style="background:#fff;border:1px solid #fff;text-align:center;">
+                        </td>
+                        <td colspan="2" style="background:#fff;border:1px solid #fff;text-align:center;">
+                            <!-- <span class="arrow_box" ng-show="submitted && form_bs_info_aset_trns.baselineDate.$error.required">
+                                Please Select Date
+                            </span> -->
+                        </td>
+                    </tr>
+                    <tr class="trhead1" height="19">
+                        <td height="19" width="218" style="padding:5px;"> Name of District:</td>
+                        <td colspan="2" height="19" width="378">
+                            <select id="selectbasic" name="district" class="form-control" ng-change="changeDis()"
+                                    ng-model="district" style="width:100%;font-weight:400;" required>
+                                <option value="" selected="true">Select a District</option>
+                               
+                                <option value="Colombo">Colombo</option>
+                                <option value="Colombo">Colombo</option>
+                                <option value="Colombo">Colombo</option>
+                                <option value="Colombo">Colombo</option>
+                                <option value="Colombo">Colombo</option>
+                                <option value="Colombo">Colombo</option>
+                                <option value="Colombo">Colombo</option>
+                                
+                            </select>
+                        </td>
+                        <td colspan="2" style="padding:5px;"> Year/Month:</td>
+                        <td colspan="2">
+                            <input name="baselineDate" type="text" placeholder="mm/yy" id="datepicker"
+                                   ng-change="changeDis()" ng-model="bs_date"
+                                   class="form-control input-md" style="font-weight:normal;" required>
+                        </td>
+                        <td style="width:100px;">
+                            <span ng-if="!check_search">
+                                <button ng-if="!is_search" class="btn btn-info" disabled>
+                                    <span class="fa fa-search"></span>
+                                </button>
+                            </span>
+                                    <span ng-if="check_search">
+                                <button ng-click="searchBsData(form_bs_info_aset_trns)" ng-if="!is_search" class="btn btn-info">
+                                    <span class="fa fa-search"></span>
+                                </button>
+                            </span>
+                            <button ng-click="clear()" ng-if="is_search" class="btn btn-warning">
+                                <span class="fa fa-times" aria-hidden="true"></span>
+                            </button>
+                        </td>
+                        <span ng-bind="user_id={{user.id}}" style="display:none;"></span>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="table table-bordered">
+                    <tbody>
+                    <tr class="trheadc1" height="34">
+                        <td rowspan="2" height="53" width="218" style="width:36.5%;"> Assets</td>
+                        <td colspan="2" height="34" width="126"> Number</td>
+                        <td colspan="2" height="34" width="126"> Average Replacement Cost</td>
+                        <td colspan="2" height="34" width="126"> Average Repair Cost</td>
+                    </tr>
+                    <tr class="trsubc" height="19">
+                        <td height="19" width="63" style="width:10.8%;"> Public</td>
+                        <td height="19" width="63" style="width:10.5%;"> Private</td>
+                        <td colspan="2" height="19" width="126" style="width:21.2%;"> (LKR/Unit)</td>
+                        <td colspan="2" height="19" width="126"> (LKR/Unit)</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div id="boxscroll1" style="max-height:400px;overflow:auto;">
+                    <table class="table table-bordered">
+                        <colgroup>
+                            <col width="218"/>
+                            <col width="63"/>
+                            <col width="63"/>
+                            <col width="63"/>
+                            <col width="63"/>
+                            <col width="63"/>
+                            <col width="63"/>
+                        </colgroup>
+                        <tbody>
+                        <tr class="trheadc" height="19">
+                            <td height="19" width="218" style="width:36.5%;"> Aircrafts</td>
+                            <td height="19" width="63" style="width:10.8%;">
+                                <br/>
+                            </td>
+                            <td height="19" width="63" style="width:10.5%;">
+                                <br/>
+                            </td>
+                            <td colspan="2" height="19" width="126" style="width:21.2%;">
+                                <br/>
+                            </td>
+                            <td colspan="2" height="19" width="126">
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr height="19"
+                            ng-repeat="bsAstAirAircrafts in bsInfoAsetTrans.transport_air.Table_1.BsAstAirAircrafts">
+                            <td class="tdpa" height="19" width="218" ng-bind="bsAstAirAircrafts.assets"
+                                ng-if="$index < 2">
+                            </td>
+                            <td width="98" ng-if="$index > 1">
+                                {% verbatim %}
+                                <button id="delete" ng-click="removeItem('BsAstAirAircrafts', $index)"
+                                        class="btn btn-sm btn-danger btn-circle">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                                <!-- <input style="width:90%;float:right;" name="bsAstAirAircrafts_{{$index}}"
+                                       ng-model="bsAstAirAircrafts.assets"
+                                       popover="This field is required"
+                                       popover-toggle="form_bs_info_aset_trns['bsAstAirAircrafts_' + $index].$dirty && !form_bs_info_aset_trns['bsAstAirAircrafts_' + $index].$valid"
+                                       popover-placement="top" required type="text" class="form-control input-md"> -->
+                                       <input value="1">
+                                {%endverbatim %}
+                            </td>
+                            <td height="19" width="63">
+                                <input id="textinput" name="textinput" type="number" placeholder="" class="form-control
+									input-md" ng-model="bsAstAirAircrafts.num_pub">
+                            </td>
+                            <td height="19" width="63">
+                                <input id="textinput" name="textinput" type="number" placeholder="" class="form-control
+										input-md" ng-model="bsAstAirAircrafts.num_pvt">
+                            </td>
+                            <td colspan="2" height="19" width="126">
+                                <input id="textinput" name="textinput" type="number" placeholder="" class="form-control
+										input-md" ng-model="bsAstAirAircrafts.avg_replace_cost">
+                            </td>
+                            <td colspan="2" height="19" width="126">
+                                <input id="textinput" name="textinput" type="number" placeholder=""
+                                       class="form-control input-md" ng-model="bsAstAirAircrafts.avg_repair_cost">
+                            </td>
+                        </tr>
+                        <tr class="tdpa" height="19">
+                            <td class="tdpa" height="19" width="218"> Others
+                                <button ng-click="insertAsset('BsAstAirAircrafts')"
+                                        class="btn btn-sm btn-info btn-circle" id="insert">
+                                    <span class="fa fa-plus"></span>
+                                </button>
+                            </td>
+                            <td height="19" width="63">
+                                <br/>
+                            </td>
+                            <td height="19" width="63">
+                                <br/>
+                            </td>
+                            <td colspan="2" height="19" width="126">
+                                <br/>
+                            </td>
+                            <td colspan="2" height="19" width="126">
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr class="trheadc" height="19">
+                            <td height="19" width="218"> Equipment</td>
+                            <td colspan="3" height="19" width="189"> Average Replacement Cost (LKR/Unit)</td>
+                            <td colspan="3" height="19" width="189"> Average Repair Cost (LKR/Unit)</td>
+                        </tr>
+                        <tr height="19"
+                            ng-repeat="bsAstAirEquipment in bsInfoAsetTrans.transport_air.Table_1.BsAstAirEquipment">
+                            <td class="tdpa" height="19" width="218" ng-bind="bsAstAirEquipment.assets"
+                                ng-if="$index < 6"></td>
+                            <td width="98" ng-if="$index > 5"> {% verbatim %}
+                                <button id="delete" ng-click="removeItem('BsAstAirEquipment', $index)" class="btn btn-sm btn-danger btn-circle">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                                <input style="width:90%;float:right;" name="bsAstAirEquipment_{{$index}}"
+                                       ng-model="bsAstAirEquipment.assets" popover="This field is required"
+                                       popover-toggle="form_bs_info_aset_trns['bsAstAirEquipment_' + $index].$dirty && !form_bs_info_aset_trns['bsAstAirEquipment_' + $index].$valid"
+                                       popover-placement="top" required type="text" class="form-control input-md">
+                                {%endverbatim %}
+                            </td>
+                            <td colspan="3" height="19" width="189">
+                                <input id="textinput" name="textinput" type="number" placeholder=""
+                                       class="form-control input-md" ng-model="bsAstAirEquipment.avg_replace_cost">
+                            </td>
+                            <td colspan="3" height="19" width="189">
+                                <input id="textinput" name="textinput" type="number" placeholder=""
+                                       class="form-control input-md" ng-model="bsAstAirEquipment.avg_repair_cost">
+                            </td>
+                        </tr>
+                        <tr class="tdpa" height="19">
+                            <td class="tdpa" height="19" width="218"> Others
+                                <button ng-click="insertAsset('BsAstAirEquipment')" class="btn btn-sm btn-info btn-circle" id="insert">
+                                    <span  class="fa fa-plus"></span>
+                                </button>
+                            </td>
+                            <td colspan="3" height="19" width="189">
+                                <br/>
+                            </td>
+                            <td colspan="3" height="19" width="189">
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr class="trheadc" height="19">
+                            <td height="19" width="218"> Materials and Supplies</td>
+                            <td colspan="3" height="19" width="189"> (LKR/Unit)</td>
+                            <td colspan="3" height="19" width="189"> (LKR/Unit)</td>
+                        </tr>
+                        <tr height="19"
+                            ng-repeat="bsAstAirSupplies in bsInfoAsetTrans.transport_air.Table_1.BsAstAirSupplies">
+                            <td class="tdpa" height="19" width="218" ng-bind="bsAstAirSupplies.assets" ng-if="$index < 1">
+                            </td>
+                            <td width="98" ng-if="$index > 0">
+                                {% verbatim %}
+                                <button id="delete" ng-click="removeItem('BsAstAirSupplies', $index)"
+                                        class="btn btn-sm btn-danger btn-circle">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                                <input style="width:90%;float:right;" name="bsAstAirSupplies_{{$index}}"
+                                       ng-model="bsAstAirSupplies.assets" popover="This field is required"
+                                       popover-toggle="form_bs_info_aset_trns['bsAstAirSupplies_' + $index].$dirty && !form_bs_info_aset_trns['bsAstAirSupplies_' + $index].$valid"
+                                       popover-placement="top" required type="text" class="form-control input-md">
+                                {%endverbatim %}
+                            </td>
+                            <td colspan="3" height="19" width="189">
+                                <input id="textinput" name="textinput" type="number" placeholder=""
+                                       class="form-control input-md" ng-model="bsAstAirSupplies.avg_replace_cost">
+                            </td>
+                            <td colspan="3" height="19" width="189"
+                                ng-if="bsAstAirSupplies.assets !='Fuel (per Liter)'">
+                                <input id="textinput" name="textinput" type="number" placeholder=""
+                                       class="form-control input-md" ng-model="bsAstAirSupplies.avg_repair_cost">
+                            </td>
+                            <td colspan="3" class="tdpa" height="19" width="189"
+                                ng-if="bsAstAirSupplies.assets =='Fuel (per Liter)'">
+                            </td>
+                        </tr>
+                        <tr class="tdpa" height="19">
+                            <td class="tdpa" class="tdpa" height="19" width="218">
+                                Others
+                                <button ng-click="insertAsset('BsAstAirSupplies')"
+                                        class="btn btn-sm btn-info btn-circle" id="insert">
+                                    <span class="fa fa-plus"></span>
+                                </button>
+                            </td>
+                            <td colspan="3" height="19" width="189">
+                                <br/>
+                            </td>
+                            <td colspan="3" height="19" width="189">
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr class="trheadc" height="19">
+                            <td height="19" width="218"> Others</td>
+                            <td colspan="3" height="19" width="189"> (LKR/Meter)</td>
+                            <td colspan="3" height="19" width="189"> (LKR/Meter)</td>
+                        </tr>
+                        <tr height="19"
+                            ng-repeat="bsAstAirOthers in bsInfoAsetTrans.transport_air.Table_1.BsAstAirOthers">
+                            <td class="tdpa" height="19" width="218" ng-bind="bsAstAirOthers.assets">
+                            </td>
+                            <td colspan="3" height="19" width="189">
+                                <input id="textinput" name="textinput" type="number" placeholder=""
+                                       class="form-control input-md" ng-model="bsAstAirOthers.avg_replace_cost">
+                            </td>
+                            <td colspan="3" height="19" width="189">
+                                <input id="textinput" name="textinput" type="number" placeholder=""
+                                       class="form-control input-md" ng-model="bsAstAirOthers.avg_repair_cost">
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <a href="#step2" id="s1" class="btn btn-sm btn-info pull-right" data-toggle="tab">
+                    <span class="glyphicon glyphicon-arrow-right"></span>
+                    Fill Structures Informations
+                </a>
+                <br>
+            </div>
+            <div class="tab-pane fade" id="step2">
+                <table class="table table-bordered">
+                    <tbody>
+                    <tr class="trheadc1" height="19">
+                        <td rowspan="2" height="53" width="218"> Structures</td>
+                        <td colspan="3" height="19" width="189"> Replacement Cost (LKR/structure)</td>
+                        <td colspan="3" height="19" width="189"> Repair Cost (LKR/sqm)</td>
+                    </tr>
+                    <tr class="trsubc" height="34">
+                        <td height="34" width="63"> 1 Floor</td>
+                        <td height="34" width="63"> 2-3 Floors</td>
+                        <td height="34" width="63"> More Than 3 Floors</td>
+                        <td height="34" width="63"> Roof</td>
+                        <td height="34" width="63"> Wall</td>
+                        <td height="34" width="63"> Floor</td>
+                    </tr>
+                    <tr height="19"
+                        ng-repeat="bsAstAirStructures in bsInfoAsetTrans.transport_air.Table_1.BsAstAirStructures">
+                        <td class="tdpa" height="19" width="218" ng-bind="bsAstAirStructures.assets"
+                            ng-if="$index < 8">
+                        </td>
+                        <td width="98" ng-if="$index > 7">
+                            {% verbatim %}
+                            <button id="delete" ng-click="removeItem('BsAstAirStructures', $index)"
+                                    class="btn btn-sm btn-danger btn-circle">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                            <input style="width:90%;float:right;" name="bsAstAirStructures_{{$index}}"
+                                   ng-model="bsAstAirStructures.assets" popover="This field is required"
+                                   popover-toggle="form_bs_info_aset_trns['bsAstAirStructures_' + $index].$dirty && !form_bs_info_aset_trns['bsAstAirStructures_' + $index].$valid"
+                                   popover-placement="top" required type="text" class="form-control input-md">
+                            {%endverbatim %}
+                        </td>
+                        <td height="19" width="63">
+                            <input id="textinput" name="textinput" type="number" placeholder=""
+                                   class="form-control input-md" ng-model="bsAstAirStructures.repc_1_floor">
+                        </td>
+                        <td height="19" width="63">
+                            <input id="textinput" name="textinput" type="number" placeholder=""
+                                   class="form-control input-md" ng-model="bsAstAirStructures.repc_2_3_floor">
+                        </td>
+                        <td height="19" width="63">
+                            <input id="textinput" name="textinput" type="number" placeholder=""
+                                   class="form-control input-md" ng-model="bsAstAirStructures.repc_moret_3_floor">
+                        </td>
+                        <td height="19" width="63">
+                            <input id="textinput" name="textinput" type="number" placeholder=""
+                                   class="form-control input-md" ng-model="bsAstAirStructures.repairc_roof">
+                        </td>
+                        <td height="19" width="63">
+                            <input id="textinput" name="textinput" type="number" placeholder=""
+                                   class="form-control input-md" ng-model="bsAstAirStructures.repairc_wall">
+                        </td>
+                        <td height="19" width="63">
+                            <input id="textinput" name="textinput" type="number" placeholder=""
+                                   class="form-control input-md" ng-model="bsAstAirStructures.repairc_floor">
+                        </td>
+                    </tr>
+                    <tr class="tdpa" height="19">
+                        <td class="tdpa" height="19" width="218"> Others
+                            <button ng-click="insertAsset('BsAstAirStructures')" class="btn btn-sm btn-info btn-circle" id="insert">
+                                <span class="fa fa-plus"></span>
+                            </button>
+                        </td>
+                        <td height="19" width="63">
+                            <br/></td>
+                        <td height="19" width="63">
+                            <br/></td>
+                        <td height="19" width="63">
+                            <br/></td>
+                        <td height="19" width="63">
+                            <br/></td>
+                        <td height="19" width="63">
+                            <br/></td>
+                        <td height="19" width="63">
+                            <br/></td>
+                    </tr>
+                    <tr class="trheadc" height="19">
+                        <td height="19" width="218"> Employment</td>
+                        <td colspan="2" height="19" width="126"> Male</td>
+                        <td colspan="2" height="19" width="126"> Female</td>
+                        <td colspan="2" height="19" width="126"> Total</td>
+                    </tr>
+                    <tr height="34"
+                        ng-repeat="bsAstAirEmployment in bsInfoAsetTrans.transport_air.Table_1.BsAstAirEmployment">
+                        <td class="tdpa" height="34" width="218" ng-bind="bsAstAirEmployment.assets">
+                        </td>
+                        <td colspan="2" height="34" width="126">
+                            <input id="textinput" name="textinput" type="number" placeholder=""
+                                   class="form-control input-md" ng-model="bsAstAirEmployment.male">
+                        </td>
+                        <td colspan="2" height="34" width="126">
+                            <input id="textinput" name="textinput" type="number" placeholder=""
+                                   class="form-control input-md" ng-model="bsAstAirEmployment.female">
+                        </td>
+                        <td class="right" colspan="2" height="34" width="126" ng-model="bsAstAirEmployment.total"
+                            ng-bind="bsAstAirEmployment.total=bsAstAirEmployment.male +bsAstAirEmployment.female">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div class="pull-right">
+                    <br>
+                    <button id="clearbtn" type="button" class="btn btn-info" ng-click="clear()">Clear</button>
+                    <span ng-if="is_edit_disable">
+                        <button id="editbtn" type="button" ng-click="editBsData(form_bs_info_aset_trns)"
+                                ng-if="!is_edit" class="btn btn-success">
+                            Edit
+                        </button>
+                    </span> <span ng-if="!is_edit_disable">
+                        <button id="editbtn" type="button" ng-else="!is_edit" class="btn btn-success" disabled>
+                            Edit
+                        </button>
+                    </span>
+                    <button id="editbtn" type="button" ng-click="cancelEdit()" ng-if="is_edit" class="btn btn-warning">
+                        Cancel Edit
+                    </button>
+                    <button id="subbtn" type="button" ng-disabled="form_pop_lat_census.$invalid"
+                            ng-click="saveBsData(form_bs_info_aset_trns)" class="btn btn-success"> Submit
+                    </button>
+                </div>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+    <!-- add model -->
+    <div class="modal fade" id="modal-container-218029" role="dialog" style="width:50%;margin:0 auto;"
+         aria-hidden="true">
+        <div class="modal-dialog" style="width:50%;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> ×</button>
+                    <h5 class="modal-title">
+                        Add Railroad Company
+                    </h5></div>
+                <div class="modal-body">
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="textinput">Name</label>
+                        <div class="col-md-10">
+                            <input id="textinput" name="textinput" type="text" placeholder=""
+                                   class="form-control input-md"></div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
+                    <button type="button" class="btn btn-primary"> Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- edit model -->
+    <div class="modal fade" id="modal-container-218028" role="dialog" style="width:50%;margin:0 auto;"
+         aria-hidden="true">
+        <div class="modal-dialog" style="width:50%;" ng-form name="form_air_trns_edit">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h5 class="modal-title">
+                        Edit Railroad Company
+                    </h5></div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label" for="textinput">Name</label>
+                        <div class="col-md-10">
+                            <input id="textinput" name="textinput" type="text" placeholder=""
+                                   class="form-control input-md">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary"> Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.conainer-fluid -->
+</main>
