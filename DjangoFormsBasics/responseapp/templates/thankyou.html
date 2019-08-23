@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thank You</title>
+</head>
+<body>
+<!-- <h2>Response Entered by you:</h2> -->
+<form>
+
+            <!-- <ul>
+              {% for customers in customer %}
+            <li>First Name: <strong>{{ customers.f_name }}</strong></li>
+            <li>Last Name: <strong>{{ customers.l_name }}</strong></li>
+            <li>Age: <strong>{{ customers.age }}</strong></li><br>
+              {% endfor %}
+          </ul> -->
+
+
+
+          <table>
+              <thead>
+                  <tr>
+                      <th>Index</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Age</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for customers in customer %}
+                  <tr>
+                      <td>{{ customers.id }}</td>
+                      <td>{{ customers.f_name }}</td>
+                      <td>{{ customers.l_name }}</td>
+                      <td>{{ customers.age }}</td>
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+
+          <table width="330" border="0">
+              <tr>
+                <td colspan="11"><table width="70" border="1" bordercolor="#CCCCFF" bgcolor="#CCCCFF">
+                    <tr  bgcolor="#CC66FF">
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                    </tr>
+                    <tr bgcolor="#CC66FF">
+                      <td></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td width="30"><div align="left">|0</div></td>
+                <td width="30"><div align="left">|10</div></td>
+                <td width="30"><div align="left">|20</div></td>
+                <td width="30"><div align="left">|30</div></td>
+                <td width="30"><div align="left">|40</div></td>
+                <td width="30"><div align="left">|50</div></td>
+                <td width="30"><div align="left">|60</div></td>
+                <td width="30"><div align="left">|70</div></td>
+                <td width="30"><div align="left">|80</div></td>
+                <td width="30"><div align="left">|90</div></td>
+                <td width="30"><div align="left">|100</div></td>
+              </tr>
+            </table>
+
+</form>
+</body>
+</html>
+
