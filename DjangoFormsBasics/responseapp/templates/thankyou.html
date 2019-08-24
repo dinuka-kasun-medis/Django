@@ -22,19 +22,26 @@
           <table>
               <thead>
                   <tr>
-                      <th>Index</th>
+                      <th>NIC</th>
+                      <th>Email</th>
                       <th>First Name</th>
                       <th>Last Name</th>
                       <th>Age</th>
+                      <th>Mobile</th>
+                      <th>Address</th>
                   </tr>
               </thead>
               <tbody>
                   {% for customers in customer %}
                   <tr>
-                      <td>{{ customers.id }}</td>
+                      <td>{{ customers.nic }}</td>
+                      <td>{{ customers.email }}</td>
                       <td>{{ customers.f_name }}</td>
                       <td>{{ customers.l_name }}</td>
                       <td>{{ customers.age }}</td>
+                      <td>{{ customers.data }}</td>
+                      {% comment %} <td>{{ customers.address }}</td> {% endcomment %}
+
                   </tr>
                   {% endfor %}
               </tbody>

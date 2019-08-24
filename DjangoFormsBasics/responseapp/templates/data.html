@@ -11,11 +11,9 @@
 <form  method="POST">
     {% csrf_token %}
     
-    Nic : {{form.nic}}<br>
-    Email : {{form.email}}<br>
-    First Name : {{form.f_name}}<br>
-    Last Name : {{form.l_name}}<br>
-    Age : {{form.age}}<br>
+    Nic : {{form.data}}<br>
+    Mobile : {{form.mobile}}<br>
+    address : {{form.address}}<br>
     
     <button type="submit" formmethod="POST">Submit</button>
 <!-- <input type="submit" value="Submit" /> -->

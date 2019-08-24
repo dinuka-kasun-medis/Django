@@ -4,5 +4,5 @@ from .import views
 app_name = "table1"
 
 urlpatterns = [
-    url(r'^table/', views.funtion)
+    url('', views.funtion)
 ]

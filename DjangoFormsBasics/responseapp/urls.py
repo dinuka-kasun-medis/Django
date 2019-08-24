@@ -6,8 +6,9 @@ from responseapp import views as responseapp_views
 
 urlpatterns = [
 
- path('response/', responseapp_views.create),
- path('response/thankyou/', responseapp_views.showData),
+ path('', responseapp_views.create),
+ path('data/thankyou/', responseapp_views.showData),
+ path('data/', responseapp_views.createData),
 
 # path('', admin.site.urls),
 ]
