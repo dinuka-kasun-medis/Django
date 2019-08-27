@@ -8,7 +8,7 @@ from django.views import generic
 
 
 from .forms import MyForm,DataForm
-from .models import Customer,Data
+from .models import ResponseappCustomer as Customer,ResponseappData as Data
 
 # from .models import formtable
 

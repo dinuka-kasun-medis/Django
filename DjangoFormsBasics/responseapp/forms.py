@@ -1,7 +1,8 @@
 
 from django import forms
-from .models import Customer
-from .models import Data
+# from .models import Customer
+# from .models import Data
+from .models import ResponseappCustomer as Customer,ResponseappData as Data
 
 class MyForm(forms.ModelForm):
     class Meta:            
