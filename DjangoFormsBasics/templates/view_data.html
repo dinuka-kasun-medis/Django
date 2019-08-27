@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Thank You</title>
+</head>
+<style>
+    table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    }
+
+    tr:nth-child(even) {
+    background-color: #dddddd;
+    }
+</style>
+<div class="container">
+<body>
+
+<form type="get" action="." style="margin: 0">
+    {% comment %} <input  id="search_box" type="text" name="search_box"  placeholder="Search..." >
+    <button id="search_submit" type="submit" >Submit</button> {% endcomment %}
+    Select Last Name :
+    <select id="search_box" type="text" name="search_box" onchange="this.form.submit()">
+        <option>--------</option>
+        {% for last_names in l_name %}
+            <option value="{{last_names.l_name}}">{{last_names.l_name}}</option>
+        {% endfor %}
+    </select>
+    {% comment %} <button id="search_submit" type="submit" >Submit</button> {% endcomment %}
+{% comment %} </form> {% endcomment %}
+    
+<!-- <h2>Response Entered by you:</h2> -->
+{% comment %} <form > {% endcomment %}
+{% comment %} Select Last Name :
+<select>
+    {% for last_names in l_name %}
+        <option  value="last_names">{{last_names.l_name}}</option>
+    {% endfor %}
+</select> {% endcomment %}
+
+  <table>
+      <thead>
+          <tr>
+              <th>id</th>
+              <th>nic</th>
+              <th>Name</th>
+              <th>Sallary</th>
+              <th>Total Sallary/AVG(Salary)</th>
+              <th>Details</th>
+          </tr>
+      </thead>
+      <tbody>
+      
+        {% for i in query%}
+        <tr>
+           <td> {{i.id}}</td>
+           <td> {{i.nic}}</td>
+           <td> {{i.f_name}}{{i.l_name}}</td>
+           <td> Rs: {{i.salary}}</td>
+           <td>{{ total_salary }}/{{ avg_salary }}</td>
+           <td>{{i.details}}</td>
+        </tr>
+        {% endfor %}
+        
+          {% comment %} {% for employees in employee %}
+          <tr>
+              <td>{{ employees.id }}</td>
+              <td>{{ employees.nic }}</td>
+              <td>{{ employees.f_name }}{{employees.l_name }}</td>
+              <td>{{ employees.salary }}</td>
+              <td>{{ total_salary }}/{{ avg_salary }}</td>
+
+          </tr>
+          {% endfor %} {% endcomment %}
+      </tbody>
+  </table>
+
+    
+
+
+</form>
+</body>
+</div>
+</html>
